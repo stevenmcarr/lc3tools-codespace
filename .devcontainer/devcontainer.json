@@ -16,7 +16,6 @@
   },
   "hostRequirements": { "cpus": 2 },
   "postCreateCommand": "bash .devcontainer/setup-desktop.sh",
-  "postStartCommand": "setsid nohup bash .devcontainer/start-lc3tools.sh > /tmp/lc3tools-start.log 2>&1 &",
   "customizations": {
     "codespaces": { "openFiles": ["README.md"] }
   }

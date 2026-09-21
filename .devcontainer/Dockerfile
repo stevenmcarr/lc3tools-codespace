@@ -24,3 +24,14 @@ RUN cd /tmp \
 
 COPY lc3tools.sh /usr/local/bin/lc3tools
 RUN chmod +x /usr/local/bin/lc3tools
+
+# Start LC3Tools with the desktop. The desktop-lite feature keeps an
+# existing ~/.fluxbox/apps, so this survives its install.
+RUN mkdir -p /home/vscode/.fluxbox \
+    && printf '%s\n' \
+        '[startup] {lc3tools}' \
+        '[transient] (role=GtkFileChooserDialog)' \
+        '  [Dimensions]	{70% 70%}' \
+        '  [Position]	(CENTER)	{0 0}' \
+        '[end]' > /home/vscode/.fluxbox/apps \
+    && chown -R vscode:vscode /home/vscode/.fluxbox
