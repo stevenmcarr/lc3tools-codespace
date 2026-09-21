@@ -1,0 +1,22 @@
+{
+  "name": "CS 1142 – LC3Tools",
+  "build": { "dockerfile": "Dockerfile" },
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "password": "noPassword",
+      "webPort": "6080",
+      "vncPort": "5901"
+    }
+  },
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": { "label": "LC3Tools desktop", "onAutoForward": "openBrowser" },
+    "5901": { "label": "VNC", "onAutoForward": "ignore" }
+  },
+  "hostRequirements": { "cpus": 2 },
+  "postCreateCommand": "bash .devcontainer/setup-desktop.sh",
+  "postStartCommand": "bash .devcontainer/start-lc3tools.sh",
+  "customizations": {
+    "codespaces": { "openFiles": ["README.md"] }
+  }
+}
