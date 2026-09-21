@@ -9,7 +9,7 @@ This repository runs [LC3Tools](https://github.com/chiragsakhuja/lc3tools) 2.1.0
 2. When it's ready, a browser tab opens with the virtual desktop. If it doesn't, open the **Ports** tab at the bottom of VS Code and click the globe icon next to **LC3Tools desktop (6080)**.
 3. Click **Connect**. LC3Tools opens automatically.
 
-If you close LC3Tools, right-click the desktop and choose **LC3Tools**, or run `lc3tools &` in the VS Code terminal.
+If you close LC3Tools, right-click the desktop and choose **LC3Tools**, or run `lc3tools` in the VS Code terminal (add a file name to open it, e.g. `lc3tools examples/hello.asm`).
 
 ## Where to keep your files
 
