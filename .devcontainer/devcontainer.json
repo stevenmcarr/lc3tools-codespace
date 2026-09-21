@@ -6,7 +6,8 @@
       "password": "noPassword",
       "webPort": "6080",
       "vncPort": "5901"
-    }
+    },
+    "ghcr.io/devcontainers/features/sshd:1": {}
   },
   "forwardPorts": [6080],
   "portsAttributes": {
